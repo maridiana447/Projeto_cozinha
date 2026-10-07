@@ -14,7 +14,7 @@
 </head>
 
 <body style="background-color: #BD2323">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-white">
         <div class="container-fluid">
             <a class="navbar-brand text-danger fw-bold" href="#">SESI | SENAI</a>
             <a class="navbar-brand fw-semibold" style="font-family: pacifico" href="#">Cozinha digital</a>
@@ -32,11 +32,11 @@
                 </ul>
             </div>
         </div>
+        <img src="{{ asset('usuario.png') }}" alt="" class="align-self-end" style="width: 50px; height: auto; margin-right: 40px;">
     </nav>
-    <div class="container">
+    <div class="container-fluid p-5">
         @yield('content')
     </div>
-
 </body>
 
 </html>
