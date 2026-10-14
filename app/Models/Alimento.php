@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\estoque;
 
 class Alimento extends Model
 {
@@ -14,4 +15,9 @@ class Alimento extends Model
         'descricao',
         'qtd_minima'
     ];
+
+    public function estoque()
+    {
+        return $this->hasMany(Estoque::class, 'id_alimento');
+    }
 }

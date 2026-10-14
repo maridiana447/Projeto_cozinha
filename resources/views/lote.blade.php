@@ -1,6 +1,7 @@
 
 @extends('layout.principal')
 @section('fundo', '#fcf7f7')
+@section('title', 'Lotes de alimentos')
 
 @section('content')
 

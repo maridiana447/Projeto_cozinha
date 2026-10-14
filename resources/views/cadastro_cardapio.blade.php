@@ -21,14 +21,7 @@
                 Carregue o arquivo do cardápio:
             </label>
 
-            <input
-                type="file"
-                name="imagem"
-                id="imagem"
-                class="form-control border border-dark"
-                accept="image/jpeg,image/png,image/webp"
-                required
-            >
+            <input type="file" name="imagem" id="imagem" class="form-control border border-dark" accept="image/jpeg,image/png,image/webp" required>
         </div>
 
         <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-5">

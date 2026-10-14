@@ -26,3 +26,6 @@ Route::post('/cadastro_cardapio', [CardapioController::class, 'cadastro_cardapio
 Route::get('/cardapio', [CardapioController::class, 'mostrar'])->name('mostrar_cardapio');
 route::get('/alimento',[AlimentoController::class, 'alimento_html']) ->name('alimento');
 route::get('/lote',[LoteController::class, 'lote_html']) ->name('lote');
+route::get('/cadastro_lote',[LoteController::class, 'cadastro_lote']) ->name('cadastro_lote');
+route::get('/cadastro_alimento',[AlimentoController::class, 'cadastro_alimento']) ->name('cadastro_alimento');
+route::get('/marcar_presenca',[PresencaController::class, 'marcar_presenca']) ->name('marcar_presenca');
