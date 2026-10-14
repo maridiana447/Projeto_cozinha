@@ -10,6 +10,8 @@ class Alimento extends Model
     protected $fillable = [
         'Nome',
         'unidade_medida',
-        'descricao'
+        'categoria',
+        'descricao',
+        'qtd_minima'
     ];
 }

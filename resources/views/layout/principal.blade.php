@@ -13,7 +13,7 @@
     </script>
 </head>
 
-<body style="background-color: #BD2323">
+<body style="background-color: @yield('fundo', '#BD2323')">
     <nav class="navbar navbar-expand-lg bg-white">
         <div class="container-fluid">
             <a class="navbar-brand text-danger fw-bold" href="#">SESI | SENAI</a>

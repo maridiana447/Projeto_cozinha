@@ -6,13 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Cardapio extends Model
 {
-    protected $table = 'cardapio';
+    protected $table = 'cardapios';
     protected $fillable = [
-        'cafe_manha',
-        'almoco',
-        'cafe_tarde',
-        'dia',
-        'descricao',
-        'id_funcionario'
+    'imagem',
+    'turno',
     ];
 }

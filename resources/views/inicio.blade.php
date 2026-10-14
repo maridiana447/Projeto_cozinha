@@ -24,38 +24,35 @@
             <h2 class="text-white mt-5" style="text-align: left; margin-left: 50px">__ <br>O que deseja ver?</h2>
             <p class="text-white text-align: left" style="margin-left: 50px">Utilize das ferramentas do nosso site pensadas
                 para você!</p>
-            <div class=>
-            </div>
         </div>
         <div class="col-md-6 d-flex flex-column align-items-start">
 
-            <!-- IMAGEM -->
+            
             <img src="{{ asset('inicio.png') }}" alt=""
-                style="width: 500px; height: auto; margin-bottom: 20px; align-self: end; margin-right: 130px;">
+                style="width: 650px; height: auto; align-self: end; margin-right: 130px;">
 
-            <!-- CARDS -->
-            <div class="d-flex gap-3">
+            <div class="d-flex gap-4" style="margin-top: 40px;">
 
-                <div class="card" style="width: 300px; height: 160px;">
+                <div class="card" style="width: 330px; height: 180px;">
                     <div class="card-body d-flex flex-column">
                         <div class="d-flex justify-content-between align-items-center">
-                            <img src="{{ asset('fogo.png') }}" alt="Cardápio" class="card-img-top mb-3"
-                                style="width: 40px; height: auto;">
-                            <img src="{{ asset('play.png') }}" alt="play" class="card-img-top mb-3"
-                                style="width: 20px; height: auto; align-self: end;">
+                            <img src="{{ asset('fogo.png') }}" alt="Cardápio" class="card-img-top mb-3"style="width: 45px; height: auto;">
+                            <img src="{{ asset('play.png') }}" alt="play" class="card-img-top mb-3"style="width: 25px; height: auto; align-self: end;">
                         </div>
-                        <p class="card-text justify-content-end">
+                        <p class="card-text justify-content-end" style="margin-top: 30px">
                                 Cardápio semanal
                         </p>
                     </div>
                 </div>
 
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                        <img src="{{ asset('ideia.png') }}" alt="Dicas" class="card-img-top mb-3"
-                            style="width: 40px; height: auto;">
-                        <p class="card-text">
-                            Cardápio semanal
+                <div class="card" style="width: 330px; height: 180px;">
+                    <div class="card-body d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <img src="{{ asset('ideia.png') }}" alt="Dicas" class="card-img-top mb-3"style="width: 45px; height: auto;">
+                            <img src="{{ asset('play.png') }}" alt="play" class="card-img-top mb-3" style="width: 25px; height: auto; align-self: end;">
+                        </div>
+                        <p class="card-text justify-content-end" style="margin-top: 30px">
+                            Dicas de alimentação
                         </p>
                     </div>
                 </div>

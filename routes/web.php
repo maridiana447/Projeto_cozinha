@@ -10,7 +10,7 @@ use App\Http\Controllers\AlimentoController;
 use App\Http\Controllers\CardapioController;
 use App\Http\Controllers\DicasController;
 use App\Http\Controllers\PresencaController;
-
+use App\Http\Controllers\LoteController;
 Route::get('/', function () {
     return view('welcome');
 });
@@ -19,7 +19,10 @@ route::get('/cadastro_aluno',[AlunoController::class, 'aluno_html']) ->name('cad
 route::get('/login_aluno',[LoginController::class, 'login_html']) ->name('login_aluno');
 route::get('/login_funcionario',[LoginfuncionarioController::class, 'funcionario_html']) ->name('login_funcionario');
 route::get('/inicio',[InicioController::class, 'inicio']) ->name('inicio');
-route::get('/alimento',[AlimentoController::class, 'alimento_html']) ->name('alimento');
-route::get('/cardapio',[CardapioController::class, 'cardapio_html']) ->name('cardapio');
 route::get('/dicas',[DicasController::class, 'dicas_html']) ->name('dicas');
 route::get('/presenca',[PresencaController::class, 'presenca_html']) ->name('presenca');
+Route::get('/cadastro_cardapio', [CardapioController::class, 'cardapio_html'])->name('cardapio');
+Route::post('/cadastro_cardapio', [CardapioController::class, 'cadastro_cardapio'])->name('cadastro_cardapio');
+Route::get('/cardapio', [CardapioController::class, 'mostrar'])->name('mostrar_cardapio');
+route::get('/alimento',[AlimentoController::class, 'alimento_html']) ->name('alimento');
+route::get('/lote',[LoteController::class, 'lote_html']) ->name('lote');

@@ -14,3 +14,4 @@ Route::get('/listar_alunos', [AlunoController::class, 'listar_alunos']);
 Route::get('/listar_alunos_simples', [AlunoController::class, 'listar_alunos_simples']);
 Route::put('/alterar_usuario', [AlunoController::class, 'alterar_usuario']);
 Route::delete('/deletar_usuario', [AlunoController::class, 'deletar_usuario']);
+Route::post('/cadastro_alimento', [AlimentoController::class,'cadastro_alimento'])->name('cadastro_alimento');
