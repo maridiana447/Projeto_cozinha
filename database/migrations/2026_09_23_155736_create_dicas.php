@@ -14,9 +14,8 @@ return new class extends Migration
         Schema::create('dicas', function (Blueprint $table) {
             $table->id();
             $table->string('titulo');
-            $table->string('descricao');
+            $table->string('descricao')->nullable();
             $table->string('categoria');
-            $table->date('data_publicacao');
             $table->unsignedBigInteger('id_funcionario');
             $table->foreign('id_funcionario')->references('id')->on('funcionario')->onDelete('cascade');
             $table->timestamps();

@@ -13,6 +13,7 @@ class Funcionario extends Model
         'senha',
         'data_nascimento',
         'cpf',
-        'tipo_usuario'
+        'cargo',
+        'nif',
     ];
 }

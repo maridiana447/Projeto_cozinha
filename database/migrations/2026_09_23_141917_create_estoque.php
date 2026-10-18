@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('id_alimento');
             $table->foreign('id_alimento')->references('id')->on('alimento')->onDelete('cascade');
+            $table->string('descricao')->nullable();
             $table->string('numero_lote');
             $table->decimal('quantidade',10,2);
             $table->date('data_validade');

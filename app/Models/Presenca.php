@@ -11,6 +11,5 @@ class Presenca extends Model
         'id_aluno_turma',
         'dia',
         'refeicao',
-        'id_funcionario'
     ];
 }

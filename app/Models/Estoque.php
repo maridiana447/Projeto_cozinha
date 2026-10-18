@@ -10,9 +10,10 @@ class Estoque extends Model
     protected $table = 'estoque';
     protected $fillable = [
         'id_alimento',
+        'descricao',
+        'numero_lote',
         'quantidade',
-        'data_validade',
-        'qtd_minima'
+        'data_validade'
     ];
 
     public function alimento()

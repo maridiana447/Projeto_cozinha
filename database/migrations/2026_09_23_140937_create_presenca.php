@@ -17,8 +17,6 @@ return new class extends Migration
             $table->foreign('id_aluno_turma')->references('id')->on('aluno_turma')->onDelete('cascade');
             $table->date('dia');
             $table->string('refeicao');
-            $table->unsignedBigInteger('id_funcionario');
-            $table->foreign('id_funcionario')->references('id')->on('funcionario')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -31,8 +29,6 @@ return new class extends Migration
         schema::table('presenca', function (blueprint $table) {
             $table->dropForeign(['id_aluno_turma']);
             $table->dropColumn('id_aluno_turma');
-            $table->dropForeign(['id_funcionario']);
-            $table->dropColumn('id_funcionario');
         });
         
         Schema::dropIfExists('presenca');

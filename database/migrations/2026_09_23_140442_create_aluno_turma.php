@@ -13,24 +13,21 @@ return new class extends Migration
     {
         Schema::create('aluno_turma', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('id_aluno');
-            $table->foreign('id_aluno')->references('id')->on('aluno')->onDelete('cascade');
-            $table->unsignedBigInteger('id_turma');
-            $table->foreign('id_turma')->references('id')->on('turma')->onDelete('cascade');
+            $table->unsignedBigInteger('id_aluno_presenca');
+            $table->foreign('id_aluno_presenca')->references('id')->on('aluno_presenca')->onDelete('cascade');
+            $table->unsignedBigInteger('id_modalidade');
+            $table->foreign('id_modalidade')->references('id')->on('modalidade')->onDelete('cascade');
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         schema::table('aluno_turma', function (blueprint $table) {
-            $table->dropForeign(['id_aluno']);
-            $table->dropColumn('id_aluno');
-            $table->dropForeign(['id_turma']);
-            $table->dropColumn('id_turma');
+            $table->dropForeign(['id_aluno_presenca']);
+            $table->dropColumn('id_aluno_presenca');
+            $table->dropForeign(['id_modalidade']);
+            $table->dropColumn('id_modalidade');
         });
         Schema::dropIfExists('aluno_turma');
     }

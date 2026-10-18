@@ -18,7 +18,8 @@ return new class extends Migration
             $table->text('senha');
             $table->date('data_nascimento')->nullable();
             $table->string('cpf');
-            $table->string('tipo_usuario');
+            $table->string('cargo');
+            $table->string('nif')->unique();
             $table->timestamps();
         });
     }

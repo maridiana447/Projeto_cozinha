@@ -11,7 +11,6 @@ class Dicas extends Model
         'titulo',
         'descricao',
         'categoria',
-        'data_publicacao',
         'id_funcionario'
     ];
 }
