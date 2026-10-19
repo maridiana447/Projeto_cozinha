@@ -11,6 +11,7 @@ use App\Http\Controllers\CardapioController;
 use App\Http\Controllers\DicasController;
 use App\Http\Controllers\PresencaController;
 use App\Http\Controllers\LoteController;
+use App\Http\Controllers\ModalidadeController;
 Route::get('/', function () {
     return view('welcome');
 });
@@ -29,3 +30,6 @@ route::get('/lote',[LoteController::class, 'lote_html']) ->name('lote');
 route::get('/cadastro_lote',[LoteController::class, 'cadastro_lote']) ->name('cadastro_lote');
 route::get('/cadastro_alimento',[AlimentoController::class, 'cadastro_alimento']) ->name('cadastro_alimento');
 route::get('/marcar_presenca',[PresencaController::class, 'marcar_presenca']) ->name('marcar_presenca');
+route::get('alunos_presentes',[PresencaController::class, 'alunos_presentes']) ->name('alunos_presentes');
+route::get('modalidades',[ModalidadeController::class, 'modalidades']) ->name('modalidades');
+route::get('cadastro_aluno_presenca',[ModalidadeController::class, 'cadastro_aluno_presenca']) ->name('cadastro_aluno_presenca');

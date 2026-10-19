@@ -13,6 +13,9 @@ class PresencaController extends Controller
     public function marcar_presenca(request $request){
         return view('marcar_presenca');
     }
+    public function alunos_presentes(request $request){
+        return view('alunos_presentes');
+    }
     public function salvar_presenca(Request $request){
         $request->validate([
             'dia' => 'required|date',

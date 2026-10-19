@@ -30,12 +30,7 @@
                 Selecione o turno:
             </label>
 
-            <select
-                name="turno"
-                id="turno"
-                class="form-select w-50 border border-dark"
-                required
-            >
+            <select name="turno" id="turno" class="form-select w-50 border border-dark" required >
                 <option value="">Selecione um turno</option>
                 <option value="medio_9">Ensino médio e 9º ano</option>
                 <option value="fundamental">Ensino fundamental I e II</option>

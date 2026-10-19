@@ -1,4 +1,3 @@
-```php
 @extends('layout.principal')
 
 @section('fundo', '#fcf7f7')
@@ -62,64 +61,37 @@
         </div>
 
         <div class="d-flex justify-content-center">
-            <div class="rounded-4 overflow-hidden"
+            <div class="d-flex rounded-4 overflow-hidden"
                  style="background-color: #F8DADA; width: 80%; min-height: 280px;">
 
-                <table class="table table-borderless mb-0"
-                       style="color: #392525;">
+                <div class="flex-grow-1" style="width: 75%;">
+                    <div class="text-center py-3">Nome</div>
 
-                    <thead>
-                        <tr>
-                            <th class="text-center fw-normal py-3"
-                                style="width: 75%;">
-                                Nome
-                            </th>
+                    <div class="py-3 ps-5">Mariana de Paula Moraes</div>
+                    <div class="py-3 ps-5">Victor Hugo de Barros Almeida Ferreira</div>
+                </div>
 
-                            <th class="text-center fw-normal py-3"
-                                style="border-left: 1px solid #EBAEAE;">
-                                Presença
-                            </th>
-                        </tr>
-                    </thead>
+                <div class="border-start border-danger-subtle text-center" style="width: 25%;">
+                    <div class="py-3">Presença</div>
 
-                    <tbody>
-                        <tr>
-                            <td class="text-center py-3">
-                                Mariana de Paula Moraes
-                            </td>
-
-                            <td class="text-center py-3"
-                                style="border-left: 1px solid #EBAEAE;">
-                                <span class="rounded-2 px-1"
-                                      style="background-color: #B8F5A8;">
-                                    Presente
-                                </span>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td class="text-center py-3">
-                                Victor Hugo de Barros Almeida Ferreira
-                            </td>
-
-                            <td class="text-center py-3"
-                                style="border-left: 1px solid #EBAEAE;">
-                                <span class="rounded-2 px-1" style="background-color: #D8D0D0;">
-                                    Presente
-                                </span>
-                            </td>
-                        </tr>
-                    </tbody>
-
-                </table>
+                    <div class="py-3">
+                        <span class="rounded-2 px-1" style="background-color: #B8F5A8;">
+                            Presente
+                        </span>
+                    </div>
+                    <div class="py-3">
+                        <span class="rounded-2 px-1" style="background-color: #D8D0D0;">
+                            Presente
+                        </span>
+                    </div>
+                </div>
 
             </div>
         </div>
 
         <div class="d-flex justify-content-center mt-2">
-            <button type="submit" class="btn rounded-3 px-3 py-0"
-                    style="background-color: #D71920; color: #241313;
-                           font-size: 24px;">
+            <button type="submit" class="btn rounded-3 px-3 py-0 fs-3"
+                    style="background-color: #D71920; color: #241313;">
                 Salvar
             </button>
         </div>
@@ -128,4 +100,3 @@
 </div>
 
 @endsection
-```

@@ -7,9 +7,9 @@
 
 <div class="container-fluid px-4">
 
-    <div class="row align-items-center mb-4 g-3">
+    <div class="row align-items-center mb-4 g-3 d-flex justify-content-between">
 
-        <div class="col-md-5">
+        <div class="col-md-4">
             <input type="text" class="form-control w-75" placeholder="Pesquisar presenças...">
         </div>
 
@@ -20,8 +20,13 @@
                 <option value="data_distante">Data mais distante</option>
             </select>
         </div>
+        <div class="col-md-2 text-end">
+            <a href="#" class="text-danger text-decoration-none">
+                Gerenciar modalidades
+            </a>
+        </div>
 
-        <div class="col-md-4 text-end">
+        <div class="col-md-2 text-end">
             <a href="#" class="text-danger text-decoration-none">
                 Marcar presença
             </a>

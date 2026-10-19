@@ -7,6 +7,12 @@ use App\Models\Modalidade;
 
 class ModalidadeController extends Controller
 {
+    public function modalidades(request $request){
+        return view('modalidades');
+    }
+    public function cadastro_aluno_presenca(request $request){
+        return view('cadastro_aluno_presenca');
+    }
     public function salvar_modalidade(Request $request){
         $request->validate([
             'nome' => 'required|string|max:255',
