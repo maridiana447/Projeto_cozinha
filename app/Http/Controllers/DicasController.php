@@ -10,6 +10,9 @@ class DicasController extends Controller
     public function dicas_html(request $request){
         return view('dicas');
     }
+    public function cadastro_dicas(request $request){
+        return view('cadastro_dicas');
+    }
 
     public function salvar_dica(Request $request){
         $request->validate([

@@ -8,8 +8,11 @@ use Illuminate\Support\Facades\Hash;
 
 class FuncionarioController extends Controller
 {
-    public function cadastro_html(request $request){
+    public function cadastro_funcionario(request $request){
         return view('cadastro_funcionario');
+    }
+    public function funcionarios(request $request){
+        return view('funcionarios');
     }
     public function salvar_funcionario(Request $request){
         $request->validate([

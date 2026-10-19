@@ -10,7 +10,6 @@
     <div class="rounded-5 p-4"
          style="background-color: #EBAEAE; width: 100%; max-width: 1100px;">
 
-        {{-- Modalidade e data --}}
         <div class="row align-items-center g-3 mb-2">
 
             <div class="col-md-6">
@@ -42,7 +41,6 @@
 
         </div>
 
-        {{-- Seleção da refeição --}}
         <div class="row mb-4">
             <div class="col-md-6">
                 <div class="d-flex align-items-center gap-2">
