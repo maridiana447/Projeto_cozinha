@@ -10,7 +10,7 @@
 
         <div class="col-md-8 col-lg-7 rounded-5 p-5 text-white" style="background-color: #bd2323;">
 
-            <h2 class="text-center mb-2">
+            <h2 class="text-center mb-2220">
                 Cadastrar novo funcionário
             </h2>
             <div class="col-lg-12 col-md-12 col-sm-12 mt-3 mb-3">
