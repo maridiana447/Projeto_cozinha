@@ -12,6 +12,10 @@ use App\Http\Controllers\DicasController;
 use App\Http\Controllers\PresencaController;
 use App\Http\Controllers\LoteController;
 use App\Http\Controllers\ModalidadeController;
+use App\Http\Controllers\HomeController;
+use App\Http\Middleware\LogadoWebMiddleware;
+use App\Http\Middleware\LogadoAdminMiddleware;
+use App\Http\Controllers\AdminController;
 Route::get('/', function () {
     return view('welcome');
 });
@@ -36,3 +40,7 @@ route::get('/cadastro_aluno_presenca',[ModalidadeController::class, 'cadastro_al
 route::get('/cadastro_dicas',[DicasController::class, 'cadastro_dicas']) ->name('cadastro_dicas');
 route::get('/funcionarios',[FuncionarioController::class, 'funcionarios']) ->name('funcionarios');
 route::get('/cadastro_funcionario',[FuncionarioController::class, 'cadastro_funcionario']) ->name('cadastro_funcionario');
+route::get('/login',[LoginController::class, 'login_aula']) ->name('login');
+route::get('/home',[HomeController::class, 'mostrarHome'])->name('home')->middleware(LogadoWebMiddleware::class);
+route::get('/painel_funcionario',[FuncionarioController::class, 'mostrarAdmin'])->name('painel_funcionario')->middleware(LogadoAdminMiddleware::class);
+route::get('/cadastro_funcionario_aula',[FuncionarioController::class, 'cadastro_funcionario_html'])->middleware(LogadoWebMiddleware::class)->name('cadastro_funcionario_aula');

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -5,13 +6,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Login de funcionario</title>
+    <title>Login de funcionário</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"
+        integrity="sha512-3j3VU6WC5rPQB4Ld1jnLV7Kd5xr+cq9avvhwqzbH/taCRNURoeEpoPBK9pDyeukwSxwRPJ8fDgvYXd6SkaZ2TA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    @vite('resources/js/login.js')
+
 </head>
 
 <body>
@@ -19,7 +27,10 @@
     <div class="container-fluid p-0">
 
         <div class="row min-vh-100 g-0">
-            <div class="col-lg-5 col-md-5 d-flex flex-column align-items-center justify-content-center position-relative" style="background-color: #BD2323">
+
+            <!-- LADO ESQUERDO -->
+            <div class="col-lg-5 col-md-5 d-flex flex-column align-items-center justify-content-center position-relative"
+                style="background-color: #BD2323">
 
                 <div class="d-flex gap-5 text-white">
                     <h1 class="fw-bold">SESI</h1>
@@ -32,24 +43,37 @@
                         digital
                     </h1>
                 </div>
-                <img src="{{ asset('seta2.png') }}" alt="Logo" class="position-absolute top-50 end-0 translate-middle-y" style="width: 100px; height: auto;">
-                <button type="button" class="btn btn-outline-light btn-lg rounded-5 mt-5 text-white fw-bold">
+
+                <img src="{{ asset('seta2.png') }}" alt="Logo"
+                    class="position-absolute top-50 end-0 translate-middle-y"
+                    style="width: 100px; height: auto;">
+
+                <button type="button"
+                    class="btn btn-outline-light btn-lg rounded-5 mt-5 text-white fw-bold">
                     Entrar
                 </button>
-                <button type="button" class="btn btn-outline-light btn-lg rounded-5 mt-3 text-white fw-bold">
+
+                <button type="button"
+                    class="btn btn-outline-light btn-lg rounded-5 mt-3 text-white fw-bold">
                     Cadastrar
                 </button>
-                <button type="button" class="btn btn-light btn-lg rounded-5 mt-3 text-danger fw-bold">
-                    Entrar como funcionario
+
+                <button type="button"
+                    class="btn btn-light btn-lg rounded-5 mt-3 text-danger fw-bold">
+                    Entrar como funcionário
                 </button>
 
             </div>
 
+            <!-- LADO DIREITO -->
+            <div class="col-lg-7 col-md-7 d-flex align-items-center justify-content-center"
+                style="background-color: #BD2323">
 
-            <div class="col-lg-7 col-md-7 d-flex align-items-center justify-content-center" style="background-color: #BD2323">
-                <div class="rounded-start-5 p-5 min-vh-100 w-100 d-flex align-items-center justify-content-center" style="background-color: white">
+                <div class="rounded-start-5 p-5 min-vh-100 w-100 d-flex align-items-center justify-content-center"
+                    style="background-color: white">
 
-                    <div class="rounded-4 p-5 w-75" style="background-color: #EBAEAE">
+                    <div class="bg rounded-4 p-5 w-75"
+                        style="background-color: #EBAEAE">
 
                         <h1 class="text-center fw-bold text-white">
                             Entre
@@ -59,28 +83,49 @@
                             Insira seus dados e entre na sua conta
                         </h4>
 
-
                         <div class="col-lg-12 col-md-12 col-sm-12 mt-3 mb-5">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control form-control-sm" id="email" name="email"
+
+                            <label for="email" class="form-label">
+                                Email
+                            </label>
+
+                            <input type="email"
+                                class="form-control form-control-sm"
+                                id="email"
+                                name="email"
                                 placeholder="Digite seu email">
+
                         </div>
 
                         <div class="col-lg-12 col-md-12 col-sm-12 mt-3 mb-5">
-                            <label for="senha" class="form-label">Senha</label>
-                            <input type="password" class="form-control form-control-sm" id="senha" name="senha"
+
+                            <label for="senha" class="form-label">
+                                Senha
+                            </label>
+
+                            <input type="password"
+                                class="form-control form-control-sm"
+                                id="senha"
+                                name="senha"
                                 placeholder="Digite sua senha">
+
                         </div>
 
                         <div class="d-grid">
 
-                            <button type="button" class="btn btn-lg text-white" style="background-color: #BD2323">
+                            <button type="button"
+                                class="btn btn-lg text-white"
+                                style="background-color: #BD2323"
+                                id="entrar">
+
                                 Entrar
+
                             </button>
 
                         </div>
 
                     </div>
+
                 </div>
 
             </div>

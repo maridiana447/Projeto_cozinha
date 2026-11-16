@@ -10,4 +10,7 @@ class LoginController extends Controller
     public function login_html(request $request){
         return view('login_aluno');
     }
+    public function login_aula(request $request){
+        return view('login');
+    }
 }
