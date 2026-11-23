@@ -15,5 +15,6 @@ class Funcionario extends Model
         'cpf',
         'cargo',
         'nif',
+        'imagem',
     ];
 }

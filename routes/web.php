@@ -44,3 +44,4 @@ route::get('/login',[LoginController::class, 'login_aula']) ->name('login');
 route::get('/home',[HomeController::class, 'mostrarHome'])->name('home')->middleware(LogadoWebMiddleware::class);
 route::get('/painel_funcionario',[FuncionarioController::class, 'mostrarAdmin'])->name('painel_funcionario')->middleware(LogadoAdminMiddleware::class);
 route::get('/cadastro_funcionario_aula',[FuncionarioController::class, 'cadastro_funcionario_html'])->middleware(LogadoWebMiddleware::class)->name('cadastro_funcionario_aula');
+route::get('/tabela',[FuncionarioController::class, 'tabela_html'])->name('tabela')->middleware(LogadoWebMiddleware::class);

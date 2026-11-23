@@ -25,9 +25,15 @@ class FuncionarioController extends Controller
             'cpf' => 'required|string|max:14|min:11|unique:funcionario',
             'cargo' => 'required|string|max:255',
             'nif' => 'required|string|max:255|unique:funcionario',
+            'imagem' => 'nullable'
         ]);
         try {
             $funcionario = new Funcionario();
+            if ($request->hasFile('imagem')){
+                $imagem = $request->file('imagem');
+                $caminho = $imagem->store('imagens', 'public');
+                $funcionario->imagem = $caminho;
+            }
             $funcionario->nome = $request->nome;
             $funcionario->email = $request->email;
             $funcionario->senha = Hash::make($request->senha);
@@ -163,6 +169,16 @@ class FuncionarioController extends Controller
     public function cadastro_funcionario_html(request $request){
         $funcionarios = Funcionario::all();
         return view('cadastro_funcionario_aula')->with('funcionarios', $funcionarios);
+    }
+    public function tabela_html(request $request){
+        /*puxando informações de duas tabelas com inner join:
+        $dados = Usuario::select('usuarios.nome', 'usuarios.email', 'usuarios.cpf', 'funcionarios.cargo', funcionarios.nif)
+        ->join('funcionarios', 'usuarios.id', '=', 'funcionarios.usuario_id')
+        ->get();
+        */
+        $dados = Funcionario::select('funcionario.nome', 'funcionario.email', 'funcionario.cargo','funcionario.nif')->get();
+
+        return view('tabela')->with('dados', $dados);
     }
     
 }
