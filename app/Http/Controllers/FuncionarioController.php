@@ -176,7 +176,7 @@ class FuncionarioController extends Controller
         ->join('funcionarios', 'usuarios.id', '=', 'funcionarios.usuario_id')
         ->get();
         */
-        $dados = Funcionario::select('funcionario.nome', 'funcionario.email', 'funcionario.cargo','funcionario.nif')->get();
+        $dados = Funcionario::select('funcionario.nome', 'funcionario.email', 'funcionario.cargo','funcionario.nif','funcionario.imagem')->get();
 
         return view('tabela')->with('dados', $dados);
     }
