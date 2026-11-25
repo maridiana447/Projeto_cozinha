@@ -1,58 +1,78 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Projeto cozinha
+## Sobre o projeto
+Sistema desenvolvido com o objetivo de automatizar e facilitar atividades do refeitório da escola SESI de Tatuí.
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## MVP
+* Cadastrar cardápio
+* Atualizar estoque
+*Cadastrar alimentos
+* Registrar presença
 
-## About Laravel
+## Tecnologias utilizadas
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+* PHP
+* Laravel
+* MySQL
+* Bootstrap
+* Git
+* GitHub
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Funcionalidades
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+* Tela de Login
+* Tela de Cadastro
+* Validação de usuário
+* Tela de cadastro de cardápio
+* Tela de visualização de cardápio
+* Tela de gerenciamento de presença
+* Tela de gerenciamento do estoque
+* Tela de gerenciamento de dicas
 
-## Learning Laravel
+## Como executar o projeto
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+* Clonar repositório:
+git clone https://github.com/seu-usuario/app-mobile
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+* Acessar pasta:
+cd projeto_cozinha
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+* Instalar dependências:
+npm install
 
-## Agentic Development
+* Executar as migrations:
+php artisan migrate
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+* Iniciar a aplicação:
+php artisan serve
 
-```bash
-composer require laravel/boost --dev
+## 🔌 Integração com API
 
-php artisan boost:install
-```
+Endpoints utilizados:
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+* POST /login
+* POST /register
+* GET /user
 
-## Contributing
+Documentação completa da API:
+https://documenter.getpostman.com/view/58957581/2sBYHSygCh
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Estrutura do projeto
 
-## Code of Conduct
+src/
+ ├── components/
+ ├── screens/
+ ├── services/
+ ├── routes/
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Documentação completa
 
-## Security Vulnerabilities
+* Documentação: https://docs.google.com/document/d/15viKE7ElztJZ0fH0XBPJ95_KxtLnE1_TKhnh_YEuOHI/edit?usp=sharing
+* API (Postman): https://documenter.getpostman.com/view/58957581/2sBYHSygCh
+* Protótipo (Figma): https://www.figma.com/design/tw4i4dyXov475zIhBaqVz7/Projeto_cozinha?node-
+id=0-1&t=mGdYrpeK7yAZ3tEO-1
+* Trello: https://trello.com/invite/b/6ab10f699c348fd0813cb53c/ATTI0a014ad2cfa6ef87d6e2af
+2322a84e2fD08131F4/cozinha
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Autor
 
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Mariana de Paula Moraes
